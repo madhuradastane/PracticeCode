@@ -1,0 +1,180 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-17T21:53:57.626Z",
+    "end": "2021-05-17T21:54:15.019Z",
+    "duration": 17393,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8725fd53-1d13-4441-8140-f7186c9400ff",
+      "title": "",
+      "fullFile": "cypress\\integration\\Briq_Assesment\\checkboxes.js",
+      "file": "cypress\\integration\\Briq_Assesment\\checkboxes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3f2e6e7d-ea8d-485d-aa0d-d6d9aed853d4",
+          "title": "TestSuite for Checkboxes functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To verify Checkboxes point is present in the list displayed on the page",
+              "fullTitle": "TestSuite for Checkboxes functionality To verify Checkboxes point is present in the list displayed on the page",
+              "timedOut": null,
+              "duration": 4232,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/checkboxes']\").should('have.text', 'Checkboxes');",
+              "err": {},
+              "uuid": "8df52446-20e2-40e0-9226-54d222a2aadc",
+              "parentUUID": "3f2e6e7d-ea8d-485d-aa0d-d6d9aed853d4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify by default checkbox 2 is checked",
+              "fullTitle": "TestSuite for Checkboxes functionality To verify by default checkbox 2 is checked",
+              "timedOut": null,
+              "duration": 2122,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/checkboxes']\").click();\ncy.get('#checkboxes > :nth-child(3)').should('be.checked');",
+              "err": {},
+              "uuid": "cbe5dbf1-7401-4c8d-bfac-06e7fe6c7f59",
+              "parentUUID": "3f2e6e7d-ea8d-485d-aa0d-d6d9aed853d4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user is able to select check box when other checkbox is already checked",
+              "fullTitle": "TestSuite for Checkboxes functionality To verify user is able to select check box when other checkbox is already checked",
+              "timedOut": null,
+              "duration": 1752,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/checkboxes');\ncy.get('#checkboxes > :nth-child(3)').should('be.checked');\ncy.get('#checkboxes > :nth-child(1)').check().should('be.checked');",
+              "err": {},
+              "uuid": "335572f0-b50d-4517-b1d3-a1eef67d87b4",
+              "parentUUID": "3f2e6e7d-ea8d-485d-aa0d-d6d9aed853d4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user is able to uncheck the checked checkbox",
+              "fullTitle": "TestSuite for Checkboxes functionality To verify user is able to uncheck the checked checkbox",
+              "timedOut": null,
+              "duration": 1600,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/checkboxes');\ncy.get('#checkboxes > :nth-child(3)').should('be.checked');\ncy.get('#checkboxes > :nth-child(3)').uncheck().should('not.be.checked');",
+              "err": {},
+              "uuid": "cf782629-5c80-4ec3-917b-04f325e2cf7f",
+              "parentUUID": "3f2e6e7d-ea8d-485d-aa0d-d6d9aed853d4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify location of Checkboxes link",
+              "fullTitle": "TestSuite for Checkboxes functionality To verify location of Checkboxes link",
+              "timedOut": null,
+              "duration": 1764,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/checkboxes']\").click();\ncy.location().should(function (location) {\n  expect(location.hash).to.be.empty;\n  expect(location.href).to.eq('http://the-internet.herokuapp.com/checkboxes');\n  expect(location.host).to.eq('the-internet.herokuapp.com');\n  expect(location.hostname).to.eq('the-internet.herokuapp.com');\n  expect(location.origin).to.eq('http://the-internet.herokuapp.com');\n  expect(location.pathname).to.eq('/checkboxes');\n  expect(location.protocol).to.eq('http:');\n});",
+              "err": {},
+              "uuid": "6a38479f-437b-4315-8234-e2de5c4c24d6",
+              "parentUUID": "3f2e6e7d-ea8d-485d-aa0d-d6d9aed853d4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8df52446-20e2-40e0-9226-54d222a2aadc",
+            "cbe5dbf1-7401-4c8d-bfac-06e7fe6c7f59",
+            "335572f0-b50d-4517-b1d3-a1eef67d87b4",
+            "cf782629-5c80-4ec3-917b-04f325e2cf7f",
+            "6a38479f-437b-4315-8234-e2de5c4c24d6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11470,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-17T21:55:38.519Z",
+    "end": "2021-05-17T21:55:57.030Z",
+    "duration": 18511,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "65f96554-f49f-418b-896a-97cdd127835e",
+      "title": "",
+      "fullFile": "cypress\\integration\\Briq_Assesment\\Entry_Ad.Spec.js",
+      "file": "cypress\\integration\\Briq_Assesment\\Entry_Ad.Spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a74b1fa1-4d09-4794-bb78-684b427fcb5d",
+          "title": "TestSuite for Entry Ad functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To verify Entry Ad point is present in the list displayed on the page",
+              "fullTitle": "TestSuite for Entry Ad functionality To verify Entry Ad point is present in the list displayed on the page",
+              "timedOut": null,
+              "duration": 3353,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/entry_ad']\").should('have.text', 'Entry Ad');",
+              "err": {},
+              "uuid": "5eb6a0ab-98d4-4ca5-bcd2-33dffb159b29",
+              "parentUUID": "a74b1fa1-4d09-4794-bb78-684b427fcb5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify on clicking Entry Ad link Model popup opens",
+              "fullTitle": "TestSuite for Entry Ad functionality To verify on clicking Entry Ad link Model popup opens",
+              "timedOut": null,
+              "duration": 1442,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/entry_ad');\ncy.get('div#modal').should('have.css', 'display', 'block');",
+              "err": {},
+              "uuid": "586e3362-98d1-4d91-87da-a50cea53d27d",
+              "parentUUID": "a74b1fa1-4d09-4794-bb78-684b427fcb5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify on clicking close Modal popup disables",
+              "fullTitle": "TestSuite for Entry Ad functionality To verify on clicking close Modal popup disables",
+              "timedOut": null,
+              "duration": 1881,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/entry_ad');\ncy.get('.modal > .modal-footer > p').click();\ncy.get('div#modal').should('have.css', 'display', 'none');",
+              "err": {},
+              "uuid": "b57d11b1-6cdf-4468-b86e-7948b4c2007b",
+              "parentUUID": "a74b1fa1-4d09-4794-bb78-684b427fcb5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user reload the page after closing modal popup",
+              "fullTitle": "TestSuite for Entry Ad functionality To verify user reload the page after closing modal popup",
+              "timedOut": null,
+              "duration": 2777,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/entry_ad');\ncy.get('.modal > .modal-footer > p').click();\ncy.reload();\ncy.get('div#modal').should('have.css', 'display', 'none');",
+              "err": {},
+              "uuid": "bd48487b-2329-41d9-a4c5-84dc50f7d1a4",
+              "parentUUID": "a74b1fa1-4d09-4794-bb78-684b427fcb5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify on clicking re-enable link modal popup enables",
+              "fullTitle": "TestSuite for Entry Ad functionality To verify on clicking re-enable link modal popup enables",
+              "timedOut": null,
+              "duration": 3400,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/entry_ad');\ncy.get('.modal > .modal-footer > p').click();\ncy.get(\"a[id='restart-ad']\").click();\ncy.reload();\ncy.get('div#modal').should('have.css', 'display', 'block');",
+              "err": {},
+              "uuid": "a4fbe0e5-8a42-4a87-a120-e1bba561bdc7",
+              "parentUUID": "a74b1fa1-4d09-4794-bb78-684b427fcb5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify location of Entry Ad link",
+              "fullTitle": "TestSuite for Entry Ad functionality To verify location of Entry Ad link",
+              "timedOut": null,
+              "duration": 1516,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/entry_ad']\").click();\ncy.location().should(function (location) {\n  expect(location.hash).to.be.empty;\n  expect(location.href).to.eq('http://the-internet.herokuapp.com/entry_ad');\n  expect(location.host).to.eq('the-internet.herokuapp.com');\n  expect(location.hostname).to.eq('the-internet.herokuapp.com');\n  expect(location.origin).to.eq('http://the-internet.herokuapp.com');\n  expect(location.pathname).to.eq('/entry_ad');\n  expect(location.protocol).to.eq('http:');\n});",
+              "err": {},
+              "uuid": "c87888d2-ed43-4620-8a01-a19631cc8de8",
+              "parentUUID": "a74b1fa1-4d09-4794-bb78-684b427fcb5d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5eb6a0ab-98d4-4ca5-bcd2-33dffb159b29",
+            "586e3362-98d1-4d91-87da-a50cea53d27d",
+            "b57d11b1-6cdf-4468-b86e-7948b4c2007b",
+            "bd48487b-2329-41d9-a4c5-84dc50f7d1a4",
+            "a4fbe0e5-8a42-4a87-a120-e1bba561bdc7",
+            "c87888d2-ed43-4620-8a01-a19631cc8de8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14369,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

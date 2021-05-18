@@ -1,0 +1,199 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-17T21:54:37.987Z",
+    "end": "2021-05-17T21:55:17.729Z",
+    "duration": 39742,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "680bb66e-3d67-4828-b7d8-8cf9dc74a32b",
+      "title": "",
+      "fullFile": "cypress\\integration\\Briq_Assesment\\Dynamic Controls.js",
+      "file": "cypress\\integration\\Briq_Assesment\\Dynamic Controls.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4109570c-c4de-41cd-b778-3e6719790409",
+          "title": "TestSuite for Dynamic Controls functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To verify Dynamic Controls point is present in the list displayed on the page",
+              "fullTitle": "TestSuite for Dynamic Controls functionality To verify Dynamic Controls point is present in the list displayed on the page",
+              "timedOut": null,
+              "duration": 3641,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/dynamic_controls']\").should('have.text', 'Dynamic Controls');",
+              "err": {},
+              "uuid": "a3b57d7e-7f37-49fd-8a2f-369c5d12b6bb",
+              "parentUUID": "4109570c-c4de-41cd-b778-3e6719790409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user click on Remove button",
+              "fullTitle": "TestSuite for Dynamic Controls functionality To verify user click on Remove button",
+              "timedOut": null,
+              "duration": 6142,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/dynamic_controls']\").click();\ncy.get(\"#checkbox-example > button[type='button']\").click();\ncy.get('#checkbox-example #message').should('have.text', \"It's gone!\");\ncy.get(\"#checkbox-example > button[type='button']\").should('have.text', 'Add');",
+              "err": {},
+              "uuid": "224de38b-228d-4ef8-9aee-99ac3670c477",
+              "parentUUID": "4109570c-c4de-41cd-b778-3e6719790409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user click on Add button",
+              "fullTitle": "TestSuite for Dynamic Controls functionality To verify user click on Add button",
+              "timedOut": null,
+              "duration": 8101,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/dynamic_controls']\").click();\ncy.get(\"#checkbox-example > button[type='button']\").click();\ncy.get(\"#checkbox-example > button[type='button']\").should('have.text', 'Add');\ncy.get(\"#checkbox-example > button[type='button']\").click();\ncy.get(\"#checkbox-example > button[type='button']\").should('have.text', 'Remove');\ncy.get('#checkbox-example #message').should('have.text', \"It's back!\");",
+              "err": {},
+              "uuid": "ee60737c-6eb0-4371-9a31-09e0ee4b6966",
+              "parentUUID": "4109570c-c4de-41cd-b778-3e6719790409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user click on Enable button",
+              "fullTitle": "TestSuite for Dynamic Controls functionality To verify user click on Enable button",
+              "timedOut": null,
+              "duration": 5462,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/dynamic_controls']\").click();\ncy.get(\"#input-example > button[type='button']\").click();\ncy.get(\"p[id='message']\").should('have.text', \"It's enabled!\");\ncy.get(\"#input-example > button[type='button']\").should('have.text', 'Disable');\ncy.get(\"input[type='text']\").should('be.enabled');",
+              "err": {},
+              "uuid": "6dc433ec-8298-4afb-a798-829cf0e54905",
+              "parentUUID": "4109570c-c4de-41cd-b778-3e6719790409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user click on Disable button",
+              "fullTitle": "TestSuite for Dynamic Controls functionality To verify user click on Disable button",
+              "timedOut": null,
+              "duration": 8269,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/dynamic_controls']\").click();\ncy.get(\"#input-example > button[type='button']\").click();\ncy.get(\"#input-example > button[type='button']\").should('have.text', 'Disable');\ncy.get(\"#input-example > button[type='button']\").click();\ncy.get(\"#input-example > button[type='button']\").should('have.text', 'Enable');\ncy.get(\"p[id='message']\").should('have.text', \"It's disabled!\");\ncy.get(\"input[type='text']\").should('be.disabled');",
+              "err": {},
+              "uuid": "77ad8dd4-a5b7-4b33-9b94-da5e85e52d6d",
+              "parentUUID": "4109570c-c4de-41cd-b778-3e6719790409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify location of Dynamic Controls link",
+              "fullTitle": "TestSuite for Dynamic Controls functionality To verify location of Dynamic Controls link",
+              "timedOut": null,
+              "duration": 2188,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/dynamic_controls']\").click();\ncy.location().should(function (location) {\n  expect(location.hash).to.be.empty;\n  expect(location.href).to.eq('http://the-internet.herokuapp.com/dynamic_controls');\n  expect(location.host).to.eq('the-internet.herokuapp.com');\n  expect(location.hostname).to.eq('the-internet.herokuapp.com');\n  expect(location.origin).to.eq('http://the-internet.herokuapp.com');\n  expect(location.pathname).to.eq('/dynamic_controls');\n  expect(location.protocol).to.eq('http:');\n});",
+              "err": {},
+              "uuid": "98ea0e5c-8c01-4876-9c11-908ef594fde4",
+              "parentUUID": "4109570c-c4de-41cd-b778-3e6719790409",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a3b57d7e-7f37-49fd-8a2f-369c5d12b6bb",
+            "224de38b-228d-4ef8-9aee-99ac3670c477",
+            "ee60737c-6eb0-4371-9a31-09e0ee4b6966",
+            "6dc433ec-8298-4afb-a798-829cf0e54905",
+            "77ad8dd4-a5b7-4b33-9b94-da5e85e52d6d",
+            "98ea0e5c-8c01-4876-9c11-908ef594fde4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 33803,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-17T21:57:29.626Z",
+    "end": "2021-05-17T21:57:42.796Z",
+    "duration": 13170,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef8fab20-0061-47c7-900c-3c2ce64d16cb",
+      "title": "",
+      "fullFile": "cypress\\integration\\Briq_Assesment\\Form_Authentication.js",
+      "file": "cypress\\integration\\Briq_Assesment\\Form_Authentication.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "adedab6d-514c-47f6-a196-62b8ff9f5afc",
+          "title": "TestSuite for Form Authentication functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To verify user click on Logout",
+              "fullTitle": "TestSuite for Form Authentication functionality To verify user click on Logout",
+              "timedOut": null,
+              "duration": 8242,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/login');\ncy.get('#username').type('tomsmith');\ncy.get('#password').type('SuperSecretPassword!');\ncy.get('.radius').click();\ncy.get('.secondary').click();\ncy.get('#flash').contains('You logged out of the secure area!');\ncy.get('.radius').should('be.enabled');",
+              "err": {},
+              "uuid": "1a851a51-f9e4-435d-a889-577aad396321",
+              "parentUUID": "adedab6d-514c-47f6-a196-62b8ff9f5afc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1a851a51-f9e4-435d-a889-577aad396321"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8242,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

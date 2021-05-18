@@ -1,0 +1,193 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 2,
+    "pending": 0,
+    "failures": 3,
+    "start": "2021-05-17T21:56:38.191Z",
+    "end": "2021-05-17T21:57:10.391Z",
+    "duration": 32200,
+    "testsRegistered": 5,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "361194fb-969b-4e08-8059-eaadbb513aee",
+      "title": "",
+      "fullFile": "cypress\\integration\\Briq_Assesment\\Forgot Password.js",
+      "file": "cypress\\integration\\Briq_Assesment\\Forgot Password.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d306dc45-24ed-42af-a770-00f473dc2179",
+          "title": "TestSuite for Forgot Password functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To verify Forgot Password point is present in the list displayed on the page",
+              "fullTitle": "TestSuite for Forgot Password functionality To verify Forgot Password point is present in the list displayed on the page",
+              "timedOut": null,
+              "duration": 3623,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/forgot_password']\").should('have.text', 'Forgot Password');",
+              "err": {},
+              "uuid": "3bc71f1b-7cfb-4116-a721-478cc05a7992",
+              "parentUUID": "d306dc45-24ed-42af-a770-00f473dc2179",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user click on Retrive password button without entering email",
+              "fullTitle": "TestSuite for Forgot Password functionality To verify user click on Retrive password button without entering email",
+              "timedOut": null,
+              "duration": 5802,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/forgot_password']\");\ncy.get(\"button[id='form_submit']\").click();\ncy.get('#flash').contains('Your email is invalid!');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `button[id='form_submit']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `button[id='form_submit']`, but never found it.\n    at Context.eval (eval at <anonymous> (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:176798:16), <anonymous>:107:8)",
+                "diff": null
+              },
+              "uuid": "3945b0e6-2a9d-4a2d-900b-c9d0bfddc13a",
+              "parentUUID": "d306dc45-24ed-42af-a770-00f473dc2179",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user enters invalid email and tap on Retrive password button",
+              "fullTitle": "TestSuite for Forgot Password functionality To verify user enters invalid email and tap on Retrive password button",
+              "timedOut": null,
+              "duration": 6015,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/forgot_password']\");\ncy.get('#email').type('jjhkxcn');\ncy.get(\"button[id='form_submit']\").click();\ncy.get('#flash').contains('Your email is invalid!');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#email`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#email`, but never found it.\n    at Context.eval (eval at <anonymous> (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:176798:16), <anonymous>:113:8)",
+                "diff": null
+              },
+              "uuid": "b340bf7e-08a7-48f2-9090-2d301d9744b3",
+              "parentUUID": "d306dc45-24ed-42af-a770-00f473dc2179",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify user click on Retrive password button after entering valid email id",
+              "fullTitle": "TestSuite for Forgot Password functionality To verify user click on Retrive password button after entering valid email id",
+              "timedOut": null,
+              "duration": 7778,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/forgot_password']\");\ncy.get('#forgot_password> #email').type('user@mailinator.com');\ncy.get('radius').click();\ncy.get('#flash').contains('Your email is invalid!');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#forgot_password> #email`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#forgot_password> #email`, but never found it.\n    at Context.eval (eval at <anonymous> (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:176798:16), <anonymous>:120:8)",
+                "diff": null
+              },
+              "uuid": "4260af9a-f84d-45fb-9706-d5fd7f0b5b7b",
+              "parentUUID": "d306dc45-24ed-42af-a770-00f473dc2179",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify location of Forgot Password link",
+              "fullTitle": "TestSuite for Forgot Password functionality To verify location of Forgot Password link",
+              "timedOut": null,
+              "duration": 3795,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/');\ncy.get('#content > ul').find(\"a[href='/forgot_password']\").click();\ncy.location().should(function (location) {\n  expect(location.hash).to.be.empty;\n  expect(location.href).to.eq('http://the-internet.herokuapp.com/forgot_password');\n  expect(location.host).to.eq('the-internet.herokuapp.com');\n  expect(location.hostname).to.eq('the-internet.herokuapp.com');\n  expect(location.origin).to.eq('http://the-internet.herokuapp.com');\n  expect(location.pathname).to.eq('/forgot_password');\n  expect(location.protocol).to.eq('http:');\n});",
+              "err": {},
+              "uuid": "b64c7bb9-d6ff-4e82-bf9c-860edd6018f6",
+              "parentUUID": "d306dc45-24ed-42af-a770-00f473dc2179",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3bc71f1b-7cfb-4116-a721-478cc05a7992",
+            "b64c7bb9-d6ff-4e82-bf9c-860edd6018f6"
+          ],
+          "failures": [
+            "3945b0e6-2a9d-4a2d-900b-c9d0bfddc13a",
+            "b340bf7e-08a7-48f2-9090-2d301d9744b3",
+            "4260af9a-f84d-45fb-9706-d5fd7f0b5b7b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27013,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
